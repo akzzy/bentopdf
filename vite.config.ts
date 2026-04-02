@@ -350,6 +350,18 @@ function rewriteHtmlPathsPlugin(): Plugin {
   };
 }
 
+function injectGoogleAdsPlugin(): Plugin {
+  return {
+    name: 'inject-google-ads',
+    transformIndexHtml(html) {
+      return html.replace(
+        '</head>',
+        `  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5225307821650217" crossorigin="anonymous"></script>\n  </head>`
+      );
+    },
+  };
+}
+
 export default defineConfig(() => {
   const USE_CDN = process.env.VITE_USE_CDN === 'true';
 
@@ -383,6 +395,7 @@ export default defineConfig(() => {
       languageRouterPlugin(),
       flattenPagesPlugin(),
       rewriteHtmlPathsPlugin(),
+      injectGoogleAdsPlugin(),
       tailwindcss(),
       nodePolyfills({
         include: ['buffer', 'stream', 'util', 'zlib', 'process'],
