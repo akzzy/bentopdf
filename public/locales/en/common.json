@@ -55,7 +55,7 @@
   "tools": {
     "title": "Get Started with",
     "toolsLabel": "Tools",
-    "subtitle": "Click a tool to open the file uploader",
+    "subtitle": "On-device processing ensures your data never leaves",
     "searchPlaceholder": "Search for a tool (e.g., 'split', 'organize'...)",
     "backToTools": "Back to Tools",
     "firstLoadNotice": "First load takes a moment as we download our conversion engine. After that, all loads will be instant."

@@ -42,6 +42,17 @@
   --font-lato: 'Lato', sans-serif;
   --font-merriweather: 'Merriweather', serif;
   --font-cedarville: 'Cedarville Cursive', cursive;
+  --color-gray-50: var(--color-neutral-50);
+  --color-gray-100: var(--color-neutral-100);
+  --color-gray-200: var(--color-neutral-200);
+  --color-gray-300: var(--color-neutral-300);
+  --color-gray-400: var(--color-neutral-400);
+  --color-gray-500: var(--color-neutral-500);
+  --color-gray-600: var(--color-neutral-600);
+  --color-gray-700: var(--color-neutral-700);
+  --color-gray-800: var(--color-neutral-800);
+  --color-gray-900: var(--color-neutral-900);
+  --color-gray-950: var(--color-neutral-950);
 }
 
 html {
@@ -50,7 +61,7 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background-color: #111827;
+  background-color: #000000;
   color: #d1d5db;
 }
 
@@ -58,8 +69,8 @@ body {
   transition:
     transform 0.2s ease-in-out,
     box-shadow 0.2s ease-in-out;
-  border: 1px solid #374151;
-  background-color: #1f2937;
+  border: 1px solid #333333;
+  background-color: #111111;
   padding: 1.5rem;
   border-radius: 0.5rem;
   display: flex;
@@ -126,7 +137,7 @@ body {
   border-left: none;
   border-right: none;
   border-top: none;
-  border-bottom: 1px solid #1f2937;
+  border-bottom: 1px solid #111111;
   background-color: transparent;
   align-items: center;
   justify-content: flex-start;
@@ -160,8 +171,8 @@ body {
 .compact-mode .tool-card:hover {
   transform: none;
   box-shadow: none;
-  background-color: #1f2937;
-  border-color: #1f2937;
+  background-color: #111111;
+  border-color: #111111;
 }
 
 @media (min-width: 640px) {
@@ -197,7 +208,7 @@ input[type='file']::file-selector-button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: #111111;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -251,9 +262,9 @@ input[type='file']::file-selector-button {
   min-width: 0;
   overflow: auto;
   height: 75vh;
-  border: 2px solid #374151;
+  border: 2px solid #333333;
   border-radius: 0.5rem;
-  background-color: #1f2937;
+  background-color: #111111;
 }
 
 /* This rule ensures canvases in side-by-side panels display at their natural rendered size. */
@@ -285,7 +296,7 @@ footer a {
 }
 
 .pill {
-  background-color: #374151;
+  background-color: #333333;
   /* bg-gray-700 */
   color: #d1d5db;
   /* text-gray-300 */
@@ -319,7 +330,7 @@ footer a {
 }
 
 .feature-card {
-  background-color: #1f2937;
+  background-color: #111111;
   /* bg-gray-800 */
   padding: 24px;
   border-radius: 8px;
@@ -389,7 +400,7 @@ footer a {
   outline: 2px solid transparent;
   outline-offset: 2px;
   box-shadow:
-    0 0 0 2px #111827,
+    0 0 0 2px #000000,
     0 0 0 4px #818cf8;
   /* focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-indigo-400 */
 }
@@ -406,7 +417,7 @@ footer a {
   /* w-16 */
   height: 64px;
   /* h-16 */
-  border: 5px solid #374151;
+  border: 5px solid #333333;
   /* border-gray-700 */
   border-bottom-color: #4f46e5;
   /* border-indigo-600 */
@@ -475,19 +486,19 @@ footer a {
 
 /* Testimonial Card Styles */
 .testimonial-card {
-  background-color: #1f2937;
+  background-color: #111111;
   /* bg-gray-800 */
   padding: 24px;
   border-radius: 0.75rem;
   /* rounded-xl */
-  border: 1px solid #374151;
+  border: 1px solid #333333;
   /* border-gray-700 */
   display: flex;
   flex-direction: column;
 }
 
 .pill {
-  background-color: #374151;
+  background-color: #333333;
   /* bg-gray-700 */
   color: #d1d5db;
   /* text-gray-300 */
@@ -499,7 +510,7 @@ footer a {
 }
 
 .pill {
-  background-color: #374151;
+  background-color: #333333;
   /* bg-gray-700 */
   color: #d1d5db;
   /* text-gray-300 */
@@ -627,10 +638,10 @@ button:disabled,
     'Courier New', monospace;
   line-height: 1;
   color: #e5e7eb;
-  background-color: #374151;
+  background-color: #333333;
   border: 1px solid #4b5563;
   border-radius: 0.25rem;
-  box-shadow: 0 1px 0 0 #1f2937;
+  box-shadow: 0 1px 0 0 #111111;
 }
 
 .shortcut-input {
@@ -652,7 +663,7 @@ button:disabled,
 }
 
 #shortcuts-list::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: #111111;
 }
 
 #shortcuts-list::-webkit-scrollbar-thumb {
