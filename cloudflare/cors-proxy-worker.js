@@ -1,5 +1,5 @@
 /**
- * BentoPDF CORS Proxy Worker
+ * Local Edit CORS Proxy Worker
  *
  * This Cloudflare Worker proxies certificate requests for the digital signing tool.
  * It fetches certificates from external CAs that don't have CORS headers enabled
@@ -22,7 +22,7 @@ const ALLOWED_PATH_PATTERNS = [
   /caIssuers/i,
 ];
 
-const ALLOWED_ORIGINS = ['https://www.bentopdf.com', 'https://bentopdf.com'];
+const ALLOWED_ORIGINS = ['https://www.localedit.com', 'https://localedit.com'];
 
 const SAFE_CONTENT_TYPES = [
   'application/x-x509-ca-cert',
@@ -346,7 +346,7 @@ export default {
     try {
       const response = await fetch(targetUrl, {
         headers: {
-          'User-Agent': 'BentoPDF-CertProxy/1.0',
+          'User-Agent': 'Local Edit-CertProxy/1.0',
         },
       });
 

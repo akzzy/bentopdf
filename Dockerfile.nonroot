@@ -1,6 +1,6 @@
 # Non-root Dockerfile — supports PUID/PGID environment variables (LSIO-style)
-# Usage: docker build -f Dockerfile.nonroot -t bentopdf .
-#        docker run -d -p 3000:8080 -e PUID=1000 -e PGID=1000 bentopdf
+# Usage: docker build -f Dockerfile.nonroot -t localedit .
+#        docker run -d -p 3000:8080 -e PUID=1000 -e PGID=1000 localedit
 
 ARG BASE_URL=
 
@@ -66,8 +66,8 @@ RUN --mount=type=secret,id=VITE_CORS_PROXY_URL \
 # Production stage — uses standard nginx (starts as root, drops to PUID/PGID)
 FROM nginx:stable-alpine-slim
 
-LABEL org.opencontainers.image.source="https://github.com/alam00000/bentopdf"
-LABEL org.opencontainers.image.url="https://github.com/alam00000/bentopdf"
+LABEL org.opencontainers.image.source="https://github.com/alam00000/localedit"
+LABEL org.opencontainers.image.url="https://github.com/alam00000/localedit"
 
 ARG BASE_URL
 

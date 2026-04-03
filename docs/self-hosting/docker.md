@@ -1,6 +1,6 @@
 # Deploy with Docker / Podman
 
-The easiest way to self-host BentoPDF in a production environment.
+The easiest way to self-host Local Edit in a production environment.
 
 > [!IMPORTANT]
 > **Required Headers for Office File Conversion**
@@ -22,16 +22,16 @@ The easiest way to self-host BentoPDF in a production environment.
 ```bash
 # Docker
 docker run -d \
-  --name bentopdf \
+  --name localedit \
   -p 3000:8080 \
   --restart unless-stopped \
-  ghcr.io/alam00000/bentopdf:latest
+  ghcr.io/alam00000/localedit:latest
 
 # Podman
 podman run -d \
-  --name bentopdf \
+  --name localedit \
   -p 3000:8080 \
-  ghcr.io/alam00000/bentopdf:latest
+  ghcr.io/alam00000/localedit:latest
 ```
 
 ## Docker Compose / Podman Compose
@@ -40,9 +40,9 @@ Create `docker-compose.yml`:
 
 ```yaml
 services:
-  bentopdf:
-    image: ghcr.io/alam00000/bentopdf:latest
-    container_name: bentopdf
+  localedit:
+    image: ghcr.io/alam00000/localedit:latest
+    container_name: localedit
     ports:
       - '3000:8080'
     restart: unless-stopped
@@ -84,29 +84,29 @@ CMD ["nginx", "-g", "daemon off;"]
 Build and run:
 
 ```bash
-docker build -t bentopdf:custom .
-docker run -d -p 3000:8080 bentopdf:custom
+docker build -t localedit:custom .
+docker run -d -p 3000:8080 localedit:custom
 ```
 
 ## Environment Variables
 
-| Variable                             | Description                                 | Default                                                        |
-| ------------------------------------ | ------------------------------------------- | -------------------------------------------------------------- |
-| `SIMPLE_MODE`                        | Build without LibreOffice tools             | `false`                                                        |
-| `BASE_URL`                           | Deploy to subdirectory                      | `/`                                                            |
-| `VITE_WASM_PYMUPDF_URL`              | PyMuPDF WASM module URL                     | `https://cdn.jsdelivr.net/npm/@bentopdf/pymupdf-wasm@0.11.16/` |
-| `VITE_WASM_GS_URL`                   | Ghostscript WASM module URL                 | `https://cdn.jsdelivr.net/npm/@bentopdf/gs-wasm/assets/`       |
-| `VITE_WASM_CPDF_URL`                 | CoherentPDF WASM module URL                 | `https://cdn.jsdelivr.net/npm/coherentpdf/dist/`               |
-| `VITE_TESSERACT_WORKER_URL`          | OCR worker script URL                       | _(empty; use Tesseract.js default CDN)_                        |
-| `VITE_TESSERACT_CORE_URL`            | OCR core runtime directory                  | _(empty; use Tesseract.js default CDN)_                        |
-| `VITE_TESSERACT_LANG_URL`            | OCR traineddata directory                   | _(empty; use Tesseract.js default CDN)_                        |
-| `VITE_TESSERACT_AVAILABLE_LANGUAGES` | Comma-separated OCR languages exposed in UI | _(empty; show full catalog)_                                   |
-| `VITE_OCR_FONT_BASE_URL`             | OCR text-layer font directory               | _(empty; use remote Noto font URLs)_                           |
-| `VITE_DEFAULT_LANGUAGE`              | Default UI language                         | `en`                                                           |
-| `VITE_BRAND_NAME`                    | Custom brand name                           | `BentoPDF`                                                     |
-| `VITE_BRAND_LOGO`                    | Logo path relative to `public/`             | `images/favicon-no-bg.svg`                                     |
-| `VITE_FOOTER_TEXT`                   | Custom footer/copyright text                | `© 2026 BentoPDF. All rights reserved.`                        |
-| `DISABLE_TOOLS`                      | Comma-separated tool IDs to hide            | _(empty; all tools enabled)_                                   |
+| Variable                             | Description                                 | Default                                                         |
+| ------------------------------------ | ------------------------------------------- | --------------------------------------------------------------- |
+| `SIMPLE_MODE`                        | Build without LibreOffice tools             | `false`                                                         |
+| `BASE_URL`                           | Deploy to subdirectory                      | `/`                                                             |
+| `VITE_WASM_PYMUPDF_URL`              | PyMuPDF WASM module URL                     | `https://cdn.jsdelivr.net/npm/@LocalEdit/pymupdf-wasm@0.11.16/` |
+| `VITE_WASM_GS_URL`                   | Ghostscript WASM module URL                 | `https://cdn.jsdelivr.net/npm/@LocalEdit/gs-wasm/assets/`       |
+| `VITE_WASM_CPDF_URL`                 | CoherentPDF WASM module URL                 | `https://cdn.jsdelivr.net/npm/coherentpdf/dist/`                |
+| `VITE_TESSERACT_WORKER_URL`          | OCR worker script URL                       | _(empty; use Tesseract.js default CDN)_                         |
+| `VITE_TESSERACT_CORE_URL`            | OCR core runtime directory                  | _(empty; use Tesseract.js default CDN)_                         |
+| `VITE_TESSERACT_LANG_URL`            | OCR traineddata directory                   | _(empty; use Tesseract.js default CDN)_                         |
+| `VITE_TESSERACT_AVAILABLE_LANGUAGES` | Comma-separated OCR languages exposed in UI | _(empty; show full catalog)_                                    |
+| `VITE_OCR_FONT_BASE_URL`             | OCR text-layer font directory               | _(empty; use remote Noto font URLs)_                            |
+| `VITE_DEFAULT_LANGUAGE`              | Default UI language                         | `en`                                                            |
+| `VITE_BRAND_NAME`                    | Custom brand name                           | `Local Edit`                                                    |
+| `VITE_BRAND_LOGO`                    | Logo path relative to `public/`             | `images/favicon-no-bg.svg`                                      |
+| `VITE_FOOTER_TEXT`                   | Custom footer/copyright text                | `© 2026 Local Edit. All rights reserved.`                       |
+| `DISABLE_TOOLS`                      | Comma-separated tool IDs to hide            | _(empty; all tools enabled)_                                    |
 
 WASM module URLs are pre-configured with CDN defaults — all advanced features work out of the box. Override these for air-gapped or self-hosted deployments.
 
@@ -118,13 +118,13 @@ Example:
 
 ```bash
 # Build with French as the default language
-docker build --build-arg VITE_DEFAULT_LANGUAGE=fr -t bentopdf .
-docker run -d -p 3000:8080 bentopdf
+docker build --build-arg VITE_DEFAULT_LANGUAGE=fr -t localedit .
+docker run -d -p 3000:8080 localedit
 ```
 
 ### Custom Branding
 
-Replace the default BentoPDF logo, name, and footer text with your own. Place your logo file in the `public/` folder (or use an existing image), then pass the branding variables at build time:
+Replace the default Local Edit logo, name, and footer text with your own. Place your logo file in the `public/` folder (or use an existing image), then pass the branding variables at build time:
 
 ```bash
 docker build \
@@ -140,11 +140,11 @@ Branding works in both full mode and Simple Mode, and can be combined with all o
 
 Hide tools from the UI for compliance or security requirements. Disabled tools are removed from the homepage, search results, keyboard shortcuts, and the workflow builder. Direct URL access shows a "tool unavailable" page.
 
-Tool IDs are the page URL without `.html`. For example, if the tool lives at `bentopdf.com/edit-pdf.html`, the ID is `edit-pdf`.
+Tool IDs are the page URL without `.html`. For example, if the tool lives at `localedit.com/edit-pdf.html`, the ID is `edit-pdf`.
 
 #### Finding Tool IDs
 
-The easiest way: open any tool in BentoPDF and look at the URL. The last part of the path (without `.html`) is the tool ID.
+The easiest way: open any tool in Local Edit and look at the URL. The last part of the path (without `.html`) is the tool ID.
 
 <details>
 <summary>Full list of tool IDs</summary>
@@ -168,7 +168,7 @@ The easiest way: open any tool in BentoPDF and look at the URL. The last part of
 ```bash
 docker build \
   --build-arg DISABLE_TOOLS="edit-pdf,sign-pdf,encrypt-pdf" \
-  -t bentopdf .
+  -t localedit .
 ```
 
 This bakes the disabled list into the JavaScript bundle. Requires a rebuild to change.
@@ -187,15 +187,15 @@ Mount a `config.json` file into the served directory — no rebuild needed:
 docker run -d \
   -p 3000:8080 \
   -v ./config.json:/usr/share/nginx/html/config.json:ro \
-  ghcr.io/alam00000/bentopdf:latest
+  ghcr.io/alam00000/localedit:latest
 ```
 
 Or with Docker Compose:
 
 ```yaml
 services:
-  bentopdf:
-    image: ghcr.io/alam00000/bentopdf:latest
+  localedit:
+    image: ghcr.io/alam00000/localedit:latest
     ports:
       - '3000:8080'
     volumes:
@@ -256,8 +256,8 @@ bash scripts/prepare-airgap.sh --list-ocr-languages
 bash scripts/prepare-airgap.sh --search-ocr-language german
 
 # 2. Download WASM/OCR packages
-npm pack @bentopdf/pymupdf-wasm@0.11.14
-npm pack @bentopdf/gs-wasm
+npm pack @LocalEdit/pymupdf-wasm@0.11.14
+npm pack @LocalEdit/gs-wasm
 npm pack coherentpdf
 npm pack tesseract.js@7.0.0
 npm pack tesseract.js-core@7.0.0
@@ -276,20 +276,20 @@ docker build \
   --build-arg VITE_TESSERACT_LANG_URL=https://internal-server.example.com/wasm/ocr/lang-data \
   --build-arg VITE_TESSERACT_AVAILABLE_LANGUAGES=eng,deu \
   --build-arg VITE_OCR_FONT_BASE_URL=https://internal-server.example.com/wasm/ocr/fonts \
-  -t bentopdf .
+  -t localedit .
 
 # 4. Export the image
-docker save bentopdf -o bentopdf.tar
+docker save localedit -o localedit.tar
 
-# 5. Transfer bentopdf.tar + the .tgz packages + tesseract-langdata/ + ocr-fonts/ into the air-gapped network
+# 5. Transfer localedit.tar + the .tgz packages + tesseract-langdata/ + ocr-fonts/ into the air-gapped network
 
 # 6. Inside the air-gapped network — load and run
-docker load -i bentopdf.tar
+docker load -i localedit.tar
 
 # Extract WASM packages to your internal web server
 mkdir -p /var/www/wasm/pymupdf /var/www/wasm/gs /var/www/wasm/cpdf /var/www/wasm/ocr/core /var/www/wasm/ocr/lang-data /var/www/wasm/ocr/fonts
-tar xzf bentopdf-pymupdf-wasm-0.11.14.tgz -C /var/www/wasm/pymupdf --strip-components=1
-tar xzf bentopdf-gs-wasm-*.tgz -C /var/www/wasm/gs --strip-components=1
+tar xzf localedit-pymupdf-wasm-0.11.14.tgz -C /var/www/wasm/pymupdf --strip-components=1
+tar xzf localedit-gs-wasm-*.tgz -C /var/www/wasm/gs --strip-components=1
 tar xzf coherentpdf-*.tgz -C /var/www/wasm/cpdf --strip-components=1
 TEMP_TESS=$(mktemp -d)
 tar xzf tesseract.js-7.0.0.tgz -C "$TEMP_TESS"
@@ -299,8 +299,8 @@ tar xzf tesseract.js-core-7.0.0.tgz -C /var/www/wasm/ocr/core --strip-components
 cp ./tesseract-langdata/*.traineddata.gz /var/www/wasm/ocr/lang-data/
 cp ./ocr-fonts/* /var/www/wasm/ocr/fonts/
 
-# Run BentoPDF
-docker run -d -p 3000:8080 --restart unless-stopped bentopdf
+# Run Local Edit
+docker run -d -p 3000:8080 --restart unless-stopped localedit
 ```
 
 Use the codes printed by `bash scripts/prepare-airgap.sh --list-ocr-languages`, or search by name with `bash scripts/prepare-airgap.sh --search-ocr-language <term>`, for `--ocr-languages`. When you build with a restricted OCR subset, pass the same codes to `VITE_TESSERACT_AVAILABLE_LANGUAGES` so the app only shows bundled languages. For full offline OCR output, also host the bundled `ocr-fonts/` directory and point `VITE_OCR_FONT_BASE_URL` at it.
@@ -309,22 +309,22 @@ Set a variable to empty string to disable that module (users must configure manu
 
 ## Custom User ID (PUID/PGID)
 
-For environments that require running as a specific non-root user (NAS devices, Kubernetes with security contexts, organizational policies), BentoPDF provides a separate Dockerfile with LSIO-style PUID/PGID support.
+For environments that require running as a specific non-root user (NAS devices, Kubernetes with security contexts, organizational policies), Local Edit provides a separate Dockerfile with LSIO-style PUID/PGID support.
 
 ### Build and Run
 
 ```bash
 # Build the non-root image
-docker build -f Dockerfile.nonroot -t bentopdf-nonroot .
+docker build -f Dockerfile.nonroot -t localedit-nonroot .
 
 # Run with custom UID/GID
 docker run -d \
-  --name bentopdf \
+  --name localedit \
   -p 3000:8080 \
   -e PUID=1000 \
   -e PGID=1000 \
   --restart unless-stopped \
-  bentopdf-nonroot
+  localedit-nonroot
 ```
 
 ### Environment Variables
@@ -339,11 +339,11 @@ docker run -d \
 
 ```yaml
 services:
-  bentopdf:
+  localedit:
     build:
       context: .
       dockerfile: Dockerfile.nonroot
-    container_name: bentopdf
+    container_name: localedit
     ports:
       - '3000:8080'
     environment:
@@ -382,18 +382,18 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./letsencrypt:/letsencrypt
 
-  bentopdf:
-    image: ghcr.io/alam00000/bentopdf:latest
+  localedit:
+    image: ghcr.io/alam00000/localedit:latest
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.bentopdf.rule=Host(`pdf.example.com`)'
-      - 'traefik.http.routers.bentopdf.entrypoints=websecure'
-      - 'traefik.http.routers.bentopdf.tls.certresolver=letsencrypt'
-      - 'traefik.http.services.bentopdf.loadbalancer.server.port=8080'
+      - 'traefik.http.routers.localedit.rule=Host(`pdf.example.com`)'
+      - 'traefik.http.routers.localedit.entrypoints=websecure'
+      - 'traefik.http.routers.localedit.tls.certresolver=letsencrypt'
+      - 'traefik.http.services.localedit.loadbalancer.server.port=8080'
       # Required headers for SharedArrayBuffer (LibreOffice WASM)
-      - 'traefik.http.routers.bentopdf.middlewares=bentopdf-headers'
-      - 'traefik.http.middlewares.bentopdf-headers.headers.customresponseheaders.Cross-Origin-Opener-Policy=same-origin'
-      - 'traefik.http.middlewares.bentopdf-headers.headers.customresponseheaders.Cross-Origin-Embedder-Policy=require-corp'
+      - 'traefik.http.routers.localedit.middlewares=localedit-headers'
+      - 'traefik.http.middlewares.localedit-headers.headers.customresponseheaders.Cross-Origin-Opener-Policy=same-origin'
+      - 'traefik.http.middlewares.localedit-headers.headers.customresponseheaders.Cross-Origin-Embedder-Policy=require-corp'
     restart: unless-stopped
 ```
 
@@ -410,8 +410,8 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
 
-  bentopdf:
-    image: ghcr.io/alam00000/bentopdf:latest
+  localedit:
+    image: ghcr.io/alam00000/localedit:latest
     restart: unless-stopped
 
 volumes:
@@ -422,7 +422,7 @@ Caddyfile:
 
 ```
 pdf.example.com {
-    reverse_proxy bentopdf:8080
+    reverse_proxy localedit:8080
     header Cross-Origin-Opener-Policy "same-origin"
     header Cross-Origin-Embedder-Policy "require-corp"
 }
@@ -432,8 +432,8 @@ pdf.example.com {
 
 ```yaml
 services:
-  bentopdf:
-    image: ghcr.io/alam00000/bentopdf:latest
+  localedit:
+    image: ghcr.io/alam00000/localedit:latest
     deploy:
       resources:
         limits:
@@ -450,17 +450,17 @@ services:
 
 ### Basic Quadlet Setup
 
-Create a container unit file at `~/.config/containers/systemd/bentopdf.container` (user) or `/etc/containers/systemd/bentopdf.container` (system):
+Create a container unit file at `~/.config/containers/systemd/localedit.container` (user) or `/etc/containers/systemd/localedit.container` (system):
 
 ```ini
 [Unit]
-Description=BentoPDF - Privacy-first PDF toolkit
+Description=Local Edit - Privacy-first PDF toolkit
 After=network-online.target
 Wants=network-online.target
 
 [Container]
-Image=ghcr.io/alam00000/bentopdf:latest
-ContainerName=bentopdf
+Image=ghcr.io/alam00000/localedit:latest
+ContainerName=localedit
 PublishPort=3000:8080
 AutoUpdate=registry
 
@@ -479,16 +479,16 @@ WantedBy=default.target
 systemctl --user daemon-reload
 
 # Start the service
-systemctl --user start bentopdf
+systemctl --user start localedit
 
 # Enable on boot
-systemctl --user enable bentopdf
+systemctl --user enable localedit
 
 # Check status
-systemctl --user status bentopdf
+systemctl --user status localedit
 
 # View logs
-journalctl --user -u bentopdf -f
+journalctl --user -u localedit -f
 ```
 
 > [!TIP]
@@ -496,17 +496,17 @@ journalctl --user -u bentopdf -f
 
 ### Simple Mode Quadlet
 
-For Simple Mode deployment, create `bentopdf-simple.container`:
+For Simple Mode deployment, create `localedit-simple.container`:
 
 ```ini
 [Unit]
-Description=BentoPDF Simple Mode - Clean PDF toolkit
+Description=Local Edit Simple Mode - Clean PDF toolkit
 After=network-online.target
 Wants=network-online.target
 
 [Container]
-Image=ghcr.io/alam00000/bentopdf-simple:latest
-ContainerName=bentopdf-simple
+Image=ghcr.io/alam00000/localedit-simple:latest
+ContainerName=localedit-simple
 PublishPort=3000:8080
 AutoUpdate=registry
 
@@ -522,13 +522,13 @@ WantedBy=default.target
 
 ```ini
 [Unit]
-Description=BentoPDF with health monitoring
+Description=Local Edit with health monitoring
 After=network-online.target
 Wants=network-online.target
 
 [Container]
-Image=ghcr.io/alam00000/bentopdf:latest
-ContainerName=bentopdf
+Image=ghcr.io/alam00000/localedit:latest
+ContainerName=localedit
 PublishPort=3000:8080
 AutoUpdate=registry
 HealthCmd=wget --spider -q http://localhost:8080 || exit 1
@@ -561,7 +561,7 @@ podman auto-update --dry-run
 
 ### Quadlet Network Configuration
 
-For custom network configuration, create a network file `bentopdf.network`:
+For custom network configuration, create a network file `localedit.network`:
 
 ```ini
 [Network]
@@ -573,10 +573,10 @@ Then reference it in your container file:
 
 ```ini
 [Container]
-Image=ghcr.io/alam00000/bentopdf:latest
-ContainerName=bentopdf
+Image=ghcr.io/alam00000/localedit:latest
+ContainerName=localedit
 PublishPort=3000:8080
-Network=bentopdf.network
+Network=localedit.network
 ```
 
 ## Updating

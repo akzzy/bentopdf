@@ -1,4 +1,4 @@
-# Simple Mode for BentoPDF
+# Simple Mode for Local Edit
 
 Simple Mode is designed for internal organizational use where you want to hide all branding and marketing content, showing only the essential PDF tools for your users.
 
@@ -27,32 +27,32 @@ Use the pre-built Simple Mode image directly:
 
 ```bash
 # Docker
-docker run -p 3000:8080 ghcr.io/alam00000/bentopdf-simple:latest
+docker run -p 3000:8080 ghcr.io/alam00000/localedit-simple:latest
 
 # Podman
-podman run -p 3000:8080 ghcr.io/alam00000/bentopdf-simple:latest
+podman run -p 3000:8080 ghcr.io/alam00000/localedit-simple:latest
 ```
 
 **Using Docker Hub:**
 
 ```bash
 # Docker
-docker run -p 3000:8080 bentopdfteam/bentopdf-simple:latest
+docker run -p 3000:8080 localeditteam/localedit-simple:latest
 
 # Podman
-podman run -p 3000:8080 docker.io/bentopdfteam/bentopdf-simple:latest
+podman run -p 3000:8080 docker.io/localeditteam/localedit-simple:latest
 ```
 
 Or with Docker Compose / Podman Compose:
 
 ```yaml
 services:
-  bentopdf:
+  localedit:
     # Using GitHub Container Registry (Recommended)
-    image: ghcr.io/alam00000/bentopdf-simple:latest
+    image: ghcr.io/alam00000/localedit-simple:latest
     # Or using Docker Hub
-    # image: bentopdfteam/bentopdf-simple:latest
-    container_name: bentopdf
+    # image: localeditteam/localedit-simple:latest
+    container_name: localedit
     restart: unless-stopped
     ports:
       - '3000:8080'
@@ -72,8 +72,8 @@ docker compose -f docker-compose.dev.yml up -d
 Build the image with the SIMPLE_MODE build argument:
 
 ```bash
-docker build --build-arg SIMPLE_MODE=true -t bentopdf-simple .
-docker run -p 3000:8080 bentopdf-simple
+docker build --build-arg SIMPLE_MODE=true -t localedit-simple .
+docker run -p 3000:8080 localedit-simple
 ```
 
 ### Method 4: Using npm Script (Easiest for Local Development)
@@ -114,12 +114,12 @@ This automatically builds and serves Simple Mode on `http://localhost:3000`.
 
 ```bash
 # Docker - Pull and run the Simple Mode image
-docker pull ghcr.io/alam00000/bentopdf-simple:latest
-docker run -p 3000:8080 ghcr.io/alam00000/bentopdf-simple:latest
+docker pull ghcr.io/alam00000/localedit-simple:latest
+docker run -p 3000:8080 ghcr.io/alam00000/localedit-simple:latest
 
 # Podman
-podman pull ghcr.io/alam00000/bentopdf-simple:latest
-podman run -p 3000:8080 ghcr.io/alam00000/bentopdf-simple:latest
+podman pull ghcr.io/alam00000/localedit-simple:latest
+podman run -p 3000:8080 ghcr.io/alam00000/localedit-simple:latest
 ```
 
 Open `http://localhost:3000` in your browser.
@@ -140,10 +140,10 @@ Open `http://localhost:3000` in your browser.
 
 ```bash
 # Test Normal Mode (Docker)
-docker run -p 3000:8080 ghcr.io/alam00000/bentopdf:latest
+docker run -p 3000:8080 ghcr.io/alam00000/localedit:latest
 
 # Test Simple Mode (Docker)
-docker run -p 3001:8080 ghcr.io/alam00000/bentopdf-simple:latest
+docker run -p 3001:8080 ghcr.io/alam00000/localedit-simple:latest
 
 # Podman users: replace 'docker' with 'podman'
 ```
@@ -169,25 +169,25 @@ When Simple Mode is working correctly, you should see:
 
 **GitHub Container Registry (Recommended):**
 
-- `ghcr.io/alam00000/bentopdf:latest`
-- `ghcr.io/alam00000/bentopdf:v1.0.0` (versioned)
+- `ghcr.io/alam00000/localedit:latest`
+- `ghcr.io/alam00000/localedit:v1.0.0` (versioned)
 
 **Docker Hub:**
 
-- `bentopdfteam/bentopdf:latest`
-- `bentopdfteam/bentopdf:v1.0.0` (versioned)
+- `localeditteam/localedit:latest`
+- `localeditteam/localedit:v1.0.0` (versioned)
 
 ### Simple Mode (Clean Interface)
 
 **GitHub Container Registry (Recommended):**
 
-- `ghcr.io/alam00000/bentopdf-simple:latest`
-- `ghcr.io/alam00000/bentopdf-simple:v1.0.0` (versioned)
+- `ghcr.io/alam00000/localedit-simple:latest`
+- `ghcr.io/alam00000/localedit-simple:v1.0.0` (versioned)
 
 **Docker Hub:**
 
-- `bentopdfteam/bentopdf-simple:latest`
-- `bentopdfteam/bentopdf-simple:v1.0.0` (versioned)
+- `localeditteam/localedit-simple:latest`
+- `localeditteam/localedit-simple:v1.0.0` (versioned)
 
 ## 🚀 Production Deployment Examples
 
@@ -195,10 +195,10 @@ When Simple Mode is working correctly, you should see:
 
 ```yaml
 services:
-  bentopdf:
-    image: ghcr.io/alam00000/bentopdf-simple:latest # Recommended
-    # image: bentopdfteam/bentopdf-simple:latest     # Alternative: Docker Hub
-    container_name: bentopdf
+  localedit:
+    image: ghcr.io/alam00000/localedit-simple:latest # Recommended
+    # image: localeditteam/localedit-simple:latest     # Alternative: Docker Hub
+    container_name: localedit
     restart: unless-stopped
     ports:
       - '80:8080'
@@ -209,16 +209,16 @@ services:
 
 ### Podman Quadlet (Linux Systemd)
 
-Create `~/.config/containers/systemd/bentopdf-simple.container`:
+Create `~/.config/containers/systemd/localedit-simple.container`:
 
 ```ini
 [Unit]
-Description=BentoPDF Simple Mode
+Description=Local Edit Simple Mode
 After=network-online.target
 
 [Container]
-Image=ghcr.io/alam00000/bentopdf-simple:latest
-ContainerName=bentopdf-simple
+Image=ghcr.io/alam00000/localedit-simple:latest
+ContainerName=localedit-simple
 PublishPort=80:8080
 AutoUpdate=registry
 
@@ -233,12 +233,12 @@ Enable and start:
 
 ```bash
 systemctl --user daemon-reload
-systemctl --user enable --now bentopdf-simple
+systemctl --user enable --now localedit-simple
 ```
 
 ## ⚠️ Important Notes
 
-- **Pre-built images**: Use `ghcr.io/alam00000/bentopdf-simple:latest` for Simple Mode (recommended)
+- **Pre-built images**: Use `ghcr.io/alam00000/localedit-simple:latest` for Simple Mode (recommended)
 - **Environment variables**: `SIMPLE_MODE=true` only works during build, not runtime
 - **Build-time optimization**: Simple Mode uses dead code elimination for smaller bundles
 - **Same functionality**: All PDF tools work identically in both modes

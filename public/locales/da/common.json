@@ -9,7 +9,7 @@
     "language": "Sprog"
   },
   "donation": {
-    "message": "Elsker du BentoPDF? Hjælp os med at holde det gratis og open source!",
+    "message": "Elsker du Local Edit? Hjælp os med at holde det gratis og open source!",
     "button": "Donér"
   },
   "hero": {
@@ -26,7 +26,7 @@
   },
   "features": {
     "title": "Hvorfor vælge",
-    "bentoPdf": "BentoPDF?",
+    "localEdit": "Local Edit?",
     "noSignup": {
       "title": "Ingen tilmelding",
       "description": "Start med det samme, ingen konti eller e-mails."
@@ -177,7 +177,7 @@
     "questions": "Spørgsmål",
     "sectionTitle": "Ofte stillede spørgsmål",
     "isFree": {
-      "question": "Er BentoPDF virkelig gratis?",
+      "question": "Er Local Edit virkelig gratis?",
       "answer": "Ja, absolut. Alle værktøjer er 100% gratis at bruge, uden filgrænser, uden tilmeldinger og uden vandmærker."
     },
     "areFilesSecure": {
@@ -186,10 +186,10 @@
     },
     "platforms": {
       "question": "Virker det på Mac, Windows og mobil?",
-      "answer": "Ja! BentoPDF virker på alle moderne browsere, uanset styresystem."
+      "answer": "Ja! Local Edit virker på alle moderne browsere, uanset styresystem."
     },
     "gdprCompliant": {
-      "question": "Er BentoPDF GDPR-kompatibel?",
+      "question": "Er Local Edit GDPR-kompatibel?",
       "answer": "Ja. Da vi ikke indsamler eller behandler dine filer på vores servere, er dine data altid under din kontrol."
     },
     "dataStorage": {
@@ -197,8 +197,8 @@
       "answer": "Nej. Vi gemmer eller sporer aldrig dine filer. Alt foregår i din browser."
     },
     "different": {
-      "question": "Hvad gør BentoPDF anderledes?",
-      "answer": "De fleste PDF-værktøjer uploader dine filer til en server. BentoPDF gør det hele lokalt i din browser."
+      "question": "Hvad gør Local Edit anderledes?",
+      "answer": "De fleste PDF-værktøjer uploader dine filer til en server. Local Edit gør det hele lokalt i din browser."
     },
     "browserBased": {
       "question": "Hvordan gør browserbaseret behandling mig sikker?",
@@ -216,11 +216,11 @@
   },
   "support": {
     "title": "Kan du lide mit arbejde?",
-    "description": "BentoPDF er et passioneret projekt, bygget for at tilbyde et gratis og privat PDF-værktøj til alle.",
+    "description": "Local Edit er et passioneret projekt, bygget for at tilbyde et gratis og privat PDF-værktøj til alle.",
     "buyMeCoffee": "Køb en kaffe til mig"
   },
   "footer": {
-    "copyright": "© 2026 BentoPDF. Alle rettigheder forbeholdes.",
+    "copyright": "© 2026 Local Edit. Alle rettigheder forbeholdes.",
     "version": "Version",
     "company": "Virksomhed",
     "aboutUs": "Om os",
@@ -281,7 +281,7 @@
       "title": "Privatliv først. Altid.",
       "description": "Alt sker lokalt i din browser. Dine dokumenter er 100% private."
     },
-    "whyBentopdf": {
+    "whyLocal Edit": {
       "title": "Hvorfor",
       "speed": {
         "title": "Bygget til hastighed",

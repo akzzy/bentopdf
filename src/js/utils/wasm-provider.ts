@@ -6,11 +6,11 @@ interface WasmProviderConfig {
   cpdf?: string;
 }
 
-const STORAGE_KEY = 'bentopdf:wasm-providers';
+const STORAGE_KEY = 'localedit:wasm-providers';
 
 const CDN_DEFAULTS: Record<WasmPackage, string> = {
-  pymupdf: 'https://cdn.jsdelivr.net/npm/@bentopdf/pymupdf-wasm@0.11.16/',
-  ghostscript: 'https://cdn.jsdelivr.net/npm/@bentopdf/gs-wasm/assets/',
+  pymupdf: 'https://cdn.jsdelivr.net/npm/@LocalEdit/pymupdf-wasm@0.11.16/',
+  ghostscript: 'https://cdn.jsdelivr.net/npm/@LocalEdit/gs-wasm/assets/',
   cpdf: 'https://cdn.jsdelivr.net/npm/coherentpdf/dist/',
 };
 
