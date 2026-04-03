@@ -103,21 +103,21 @@ This Agreement shall be governed by and construed in accordance with the laws of
 
 By signing this Agreement, You confirm that You have the authority to bind the legal entity named below, and that entity agrees to the terms of this Corporate Contributor License Agreement.
 
-**Legal Entity Name:** ************\_\_\_************
+**Legal Entity Name:** ****\*\*\*\*****\_\_\_****\*\*\*\*****
 
-**Address:** ************\_\_\_************
+**Address:** ****\*\*\*\*****\_\_\_****\*\*\*\*****
 
-**Point of Contact Name:** ************\_\_\_************
+**Point of Contact Name:** ****\*\*\*\*****\_\_\_****\*\*\*\*****
 
-**Point of Contact Email:** ************\_\_\_************
+**Point of Contact Email:** ****\*\*\*\*****\_\_\_****\*\*\*\*****
 
-**Point of Contact Phone:** ************\_\_\_************
+**Point of Contact Phone:** ****\*\*\*\*****\_\_\_****\*\*\*\*****
 
-**Signature:** ************\_\_\_************
+**Signature:** ****\*\*\*\*****\_\_\_****\*\*\*\*****
 
-**Title:** ************\_\_\_************
+**Title:** ****\*\*\*\*****\_\_\_****\*\*\*\*****
 
-**Date:** ************\_\_\_************
+**Date:** ****\*\*\*\*****\_\_\_****\*\*\*\*****
 
 ---
 
@@ -133,7 +133,7 @@ The following individuals are authorized to submit Contributions to the Project 
 |           |                 |               |            |
 |           |                 |               |            |
 
-_Add additional rows as needed. To update this list, contact the Project Owner at contact@localedit.com_
+_Add additional rows as needed. To update this list, contact the Project Owner at contact@localedit.net_
 
 ---
 

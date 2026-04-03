@@ -7,12 +7,12 @@
     "",
     "**Individual Contributors**: Please review and sign our [Individual CLA (ICLA)](ICLA.md)",
     "",
-    "**Corporate Contributors**: If you are contributing on behalf of your employer, please have your organization sign our [Corporate CLA (CCLA)](CCLA.md) by contacting contact@localedit.com"
+    "**Corporate Contributors**: If you are contributing on behalf of your employer, please have your organization sign our [Corporate CLA (CCLA)](CCLA.md) by contacting contact@localedit.net"
   ],
   "notes": {
     "purpose": "This CLA enables Local Edit's dual licensing model (AGPL-3.0 + commercial license)",
     "icla_url": "https://github.com/alam00000/localedit/blob/main/ICLA.md",
     "ccla_url": "https://github.com/alam00000/localedit/blob/main/CCLA.md",
-    "contact": "contact@localedit.com"
+    "contact": "contact@localedit.net"
   }
 }

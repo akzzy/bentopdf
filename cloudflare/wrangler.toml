@@ -37,9 +37,9 @@ id = "b88e030b308941118cd484e3fcb3ae49"
 
 # Optional: Custom domain routing
 # routes = [
-#   { pattern = "cors-proxy.localedit.com/*", zone_name = "localedit.com" }
+#   { pattern = "cors-proxy.localedit.net/*", zone_name = "localedit.net" }
 # ]
 
 # Optional: Environment variables (for non-secret config)
 # [vars]
-# ALLOWED_ORIGINS = "https://www.localedit.com,https://localedit.com"
+# ALLOWED_ORIGINS = "https://pdf.localedit.net,https://pdf.localedit.net"

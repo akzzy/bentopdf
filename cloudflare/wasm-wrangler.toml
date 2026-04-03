@@ -40,9 +40,9 @@ compatibility_date = "2024-01-01"
 # USAGE FROM LOCALEDIT
 # =============================================================================
 # In Local Edit's WASM Settings page, configure URLs like:
-#   PyMuPDF: https://wasm.localedit.com/pymupdf/
-#   Ghostscript: https://wasm.localedit.com/gs/
-#   CoherentPDF: https://wasm.localedit.com/cpdf/
+#   PyMuPDF: https://wasm.localedit.net/pymupdf/
+#   Ghostscript: https://wasm.localedit.net/gs/
+#   CoherentPDF: https://wasm.localedit.net/cpdf/
 
 # =============================================================================
 # RATE LIMITING (Optional but recommended)
@@ -63,7 +63,7 @@ id = "b88e030b308941118cd484e3fcb3ae49"
 # =============================================================================
 # CUSTOM DOMAIN (Optional)
 # =============================================================================
-# If you want a custom domain like wasm.localedit.com:
+# If you want a custom domain like wasm.localedit.net:
 # routes = [
-#   { pattern = "wasm.localedit.com/*", zone_name = "localedit.com" }
+#   { pattern = "wasm.localedit.net/*", zone_name = "localedit.net" }
 # ]

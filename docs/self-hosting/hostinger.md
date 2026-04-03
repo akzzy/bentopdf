@@ -143,7 +143,7 @@ AddType image/webp .webp
 # ============================================
 # Canonical WWW (update domain as needed)
 RewriteCond %{HTTP_HOST} ^localedit\.com [NC]
-RewriteRule ^(.*)$ https://www.localedit.com/$1 [L,R=301]
+RewriteRule ^(.*)$ https://pdf.localedit.net/$1 [L,R=301]
 
 # Force HTTPS
 RewriteCond %{HTTPS} off

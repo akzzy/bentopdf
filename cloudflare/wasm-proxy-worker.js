@@ -18,7 +18,10 @@
  * - CPDF_SOURCE: Base URL for CoherentPDF files (e.g., https://cdn.example.com/cpdf)
  */
 
-const ALLOWED_ORIGINS = ['https://www.localedit.com', 'https://localedit.com'];
+const ALLOWED_ORIGINS = [
+  'https://pdf.localedit.net',
+  'https://pdf.localedit.net',
+];
 
 const MAX_FILE_SIZE_BYTES = 100 * 1024 * 1024;
 

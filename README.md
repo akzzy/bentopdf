@@ -67,9 +67,9 @@ Have questions, feature requests, or want to chat with the community? Join our D
 
 ## 📚 Documentation
 
-[![Documentation](https://img.shields.io/badge/Docs-VitePress-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://localedit.com/docs/)
+[![Documentation](https://img.shields.io/badge/Docs-VitePress-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://pdf.localedit.net/docs/)
 
-Visit our [Documentation](https://localedit.com/docs/) for:
+Visit our [Documentation](https://pdf.localedit.net/docs/) for:
 
 - **Getting Started** guide
 - **Tools Reference** (50+ tools)
@@ -96,7 +96,7 @@ Local Edit is **dual-licensed** to fit your needs:
 
 > **One-time purchase** · **Unlimited devices & users** · **Lifetime updates** · **No AGPL obligations**
 
-📖 For more details, see our [Licensing Page](https://localedit.com/licensing.html)
+📖 For more details, see our [Licensing Page](https://pdf.localedit.net/licensing.html)
 
 ### AGPL Components (Pre-configured via CDN)
 
@@ -796,7 +796,7 @@ systemctl --user daemon-reload
 systemctl --user enable --now localedit
 ```
 
-For detailed Quadlet configuration, see [Self-Hosting Docker Guide](https://localedit.com/docs/self-hosting/docker).
+For detailed Quadlet configuration, see [Self-Hosting Docker Guide](https://pdf.localedit.net/docs/self-hosting/docker).
 
 ### 🏢 Simple Mode for Internal Use
 
@@ -873,7 +873,7 @@ docker run -d -p 3000:8080 \
   ghcr.io/alam00000/localedit:latest
 ```
 
-Both methods can be combined — the lists are merged. For the full list of tool IDs, see the [self-hosting docs](https://localedit.com/docs/self-hosting/docker#disabling-specific-tools).
+Both methods can be combined — the lists are merged. For the full list of tool IDs, see the [self-hosting docs](https://pdf.localedit.net/docs/self-hosting/docker#disabling-specific-tools).
 
 You can also disable specific features inside the PDF Editor (e.g., redaction, forms) without disabling the entire editor. Add `editorDisabledCategories` to your `config.json`:
 
@@ -883,7 +883,7 @@ You can also disable specific features inside the PDF Editor (e.g., redaction, f
 }
 ```
 
-For the full list of editor categories, see the [self-hosting docs](https://localedit.com/docs/self-hosting/docker#disabling-editor-features).
+For the full list of editor categories, see the [self-hosting docs](https://pdf.localedit.net/docs/self-hosting/docker#disabling-editor-features).
 
 ### 🔒 Security Features
 
@@ -956,7 +956,7 @@ The **Digital Signature** tool uses a signing library that may need to fetch cer
    ```
 
    > [!IMPORTANT]
-   > Without this step, the proxy will reject all requests from your site with a 403 error. The default only allows `localedit.com`.
+   > Without this step, the proxy will reject all requests from your site with a 403 error. The default only allows `localedit.net`.
 
 4. **Deploy the worker:**
 

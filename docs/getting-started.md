@@ -10,7 +10,7 @@ Local Edit is a free, open-source, privacy-first PDF toolkit that runs **entirel
 
 ### Option 1: Use the Hosted Version
 
-Visit [localedit.com](https://localedit.com) to use Local Edit instantly—no installation required.
+Visit [localedit.net](https://pdf.localedit.net) to use Local Edit instantly—no installation required.
 
 ### Option 2: Self-Host with Docker
 

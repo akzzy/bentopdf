@@ -21,7 +21,7 @@ Sign our [Individual Contributor License Agreement (ICLA)](ICLA.md). When you su
 
 ### For Corporate Contributors
 
-If you are contributing on behalf of your employer, your organization needs to sign our [Corporate Contributor License Agreement (CCLA)](CCLA.md). Please contact us at [contact@localedit.com](mailto:contact@localedit.com) to arrange corporate CLA signing.
+If you are contributing on behalf of your employer, your organization needs to sign our [Corporate Contributor License Agreement (CCLA)](CCLA.md). Please contact us at [contact@localedit.net](mailto:contact@localedit.net) to arrange corporate CLA signing.
 
 ### What the CLA Grants
 
@@ -140,7 +140,7 @@ When submitting code contributions, please use our [pull request template](.gith
 
 If you discover a security vulnerability, please **do not** open a public issue. Instead, contact the project maintainer directly at:
 
-**Email:** [contact@localedit.com](mailto:contact@localedit.com)
+**Email:** [contact@localedit.net](mailto:contact@localedit.net)
 
 ---
 

@@ -48,7 +48,7 @@ If you're self-hosting Local Edit, you'll need to deploy your own CORS proxy for
    ```
 
    ::: warning Important
-   Without this change, the proxy will reject all requests from your site with a **403 Forbidden** error. The default only allows requests from `localedit.com`.
+   Without this change, the proxy will reject all requests from your site with a **403 Forbidden** error. The default only allows requests from `localedit.net`.
    :::
 
 4. **Deploy the proxy**:

@@ -58,13 +58,13 @@ In Local Edit's Advanced Settings (wasm-settings.html), enter:
 
 ## Custom Domain (Optional)
 
-To use a custom domain like `wasm.localedit.com`:
+To use a custom domain like `wasm.localedit.net`:
 
 1. Add route in `wasm-wrangler.toml`:
 
 ```toml
 routes = [
-  { pattern = "wasm.localedit.com/*", zone_name = "localedit.com" }
+  { pattern = "wasm.localedit.net/*", zone_name = "localedit.net" }
 ]
 ```
 

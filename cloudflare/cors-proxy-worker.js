@@ -22,7 +22,10 @@ const ALLOWED_PATH_PATTERNS = [
   /caIssuers/i,
 ];
 
-const ALLOWED_ORIGINS = ['https://www.localedit.com', 'https://localedit.com'];
+const ALLOWED_ORIGINS = [
+  'https://pdf.localedit.net',
+  'https://pdf.localedit.net',
+];
 
 const SAFE_CONTENT_TYPES = [
   'application/x-x509-ca-cert',

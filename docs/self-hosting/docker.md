@@ -140,7 +140,7 @@ Branding works in both full mode and Simple Mode, and can be combined with all o
 
 Hide tools from the UI for compliance or security requirements. Disabled tools are removed from the homepage, search results, keyboard shortcuts, and the workflow builder. Direct URL access shows a "tool unavailable" page.
 
-Tool IDs are the page URL without `.html`. For example, if the tool lives at `localedit.com/edit-pdf.html`, the ID is `edit-pdf`.
+Tool IDs are the page URL without `.html`. For example, if the tool lives at `localedit.net/edit-pdf.html`, the ID is `edit-pdf`.
 
 #### Finding Tool IDs
 

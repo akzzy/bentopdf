@@ -3,7 +3,7 @@
 Local Edit is dual-licensed under **AGPL-3.0** (for open-source projects) and a **Commercial License** (for proprietary/closed-source applications).
 
 ::: tip Full Details
-For complete licensing information, delivery details, AGPL component notices, and invoicing, visit our [Licensing Page](https://localedit.com/licensing.html).
+For complete licensing information, delivery details, AGPL component notices, and invoicing, visit our [Licensing Page](https://pdf.localedit.net/licensing.html).
 :::
 
 ## Get a Commercial License
@@ -59,7 +59,7 @@ The commercial license covers Local Edit's own code. If you configure and use AG
 - Ko-fi does not automatically issue invoices.
 - An official invoice will be provided immediately upon request.
 
-**Contact us:** [contact@localedit.com](mailto:contact@localedit.com) with your purchase details.
+**Contact us:** [contact@localedit.net](mailto:contact@localedit.net) with your purchase details.
 
 ## What's Included
 
@@ -89,4 +89,4 @@ Components like CoherentPDF are licensed under AGPL v3 and remain under that lic
 
 ### How do I get an invoice?
 
-Email [contact@localedit.com](mailto:contact@localedit.com) with your Ko-fi purchase confirmation, and we'll send an official invoice.
+Email [contact@localedit.net](mailto:contact@localedit.net) with your Ko-fi purchase confirmation, and we'll send an official invoice.

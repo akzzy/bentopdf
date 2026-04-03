@@ -1,12 +1,12 @@
 # Local Edit Robots.txt
-# https://www.localedit.com
+# https://pdf.localedit.net
 
 # Allow all crawlers
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.localedit.com/sitemap.xml
+Sitemap: https://pdf.localedit.net/sitemap.xml
 
 # Disallow internal/system paths
 Disallow: /api/
