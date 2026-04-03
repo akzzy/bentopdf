@@ -583,7 +583,7 @@ const init = async () => {
   ) as HTMLInputElement;
   const toolInterface = document.getElementById('tool-interface');
 
-  const savedFullWidth = localStorage.getItem('fullWidthMode') !== 'false';
+  const savedFullWidth = localStorage.getItem('fullWidthMode') === 'true';
   if (fullWidthToggle) {
     fullWidthToggle.checked = savedFullWidth;
     applyFullWidthMode(savedFullWidth);
