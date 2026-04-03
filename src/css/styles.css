@@ -53,6 +53,124 @@
   --color-gray-800: var(--color-neutral-800);
   --color-gray-900: var(--color-neutral-900);
   --color-gray-950: var(--color-neutral-950);
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+/* Light Mode Overrides */
+.light-mode {
+  --color-white: #111827;
+  --color-black: #ffffff;
+
+  --color-gray-950: #f9fafb;
+  --color-gray-900: #fafafa;
+  --color-gray-800: #ffffff;
+  --color-gray-700: #e5e7eb;
+  --color-gray-600: #d1d5db;
+  --color-gray-500: #9ca3af;
+  --color-gray-400: #4b5563;
+  --color-gray-300: #374151;
+  --color-gray-200: #1f2937;
+  --color-gray-100: #111827;
+  --color-gray-50: #030712;
+}
+
+html.light-mode body {
+  background-color: #fafafa;
+  color: #111827;
+}
+
+.light-mode .dark-icon,
+.light-mode .dark-text {
+  display: inline-block !important;
+}
+
+.light-mode .light-icon,
+.light-mode .light-text {
+  display: none !important;
+}
+
+.light-mode .tool-card {
+  border-color: #e5e7eb;
+  background-color: #ffffff;
+}
+
+.light-mode .tool-card:hover {
+  border-color: #4f46e5;
+  background-color: #ffffff;
+}
+
+.light-mode .category-header {
+  color: #111827;
+}
+
+.light-mode .compact-mode .tool-card {
+  border-bottom: 1px solid #e5e7eb;
+  background-color: transparent;
+}
+
+.light-mode .compact-mode .tool-card:hover {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.light-mode .pdf-panel {
+  border-color: #e5e7eb;
+  background-color: #ffffff;
+}
+
+.light-mode .pill {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.light-mode .feature-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.light-mode .nav-link {
+  color: #4b5563;
+}
+
+.light-mode .nav-link:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.light-mode .mobile-nav-link {
+  color: #4b5563;
+}
+
+.light-mode .mobile-nav-link:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.light-mode .testimonial-card {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.light-mode .legal-content h2 {
+  color: #111827;
+}
+
+.light-mode .legal-content h3 {
+  color: #4f46e5; /* indigo-600 */
+}
+
+.light-mode .legal-content p,
+.light-mode .legal-content ul {
+  color: #4b5563; /* gray-600 */
+}
+
+.light-mode .shortcut-key {
+  color: #111827;
+  background-color: #ffffff;
+  border-color: #d1d5db;
+  box-shadow: 0 1px 0 0 #e5e7eb;
 }
 
 html {

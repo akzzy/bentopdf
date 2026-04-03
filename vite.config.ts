@@ -362,6 +362,30 @@ function injectGoogleAdsPlugin(): Plugin {
   };
 }
 
+function injectThemeScriptPlugin(): Plugin {
+  return {
+    name: 'inject-theme-script',
+    transformIndexHtml(html) {
+      return html.replace(
+        '</head>',
+        `  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        if (savedTheme === 'light' || (!savedTheme && prefersLight)) {
+          document.documentElement.classList.add('light-mode');
+        } else {
+          document.documentElement.classList.remove('light-mode');
+        }
+      } catch(e) {}
+    })();
+  </script>\n  </head>`
+      );
+    },
+  };
+}
+
 export default defineConfig(() => {
   const USE_CDN = process.env.VITE_USE_CDN === 'true';
 
@@ -396,6 +420,7 @@ export default defineConfig(() => {
       flattenPagesPlugin(),
       rewriteHtmlPathsPlugin(),
       injectGoogleAdsPlugin(),
+      injectThemeScriptPlugin(),
       tailwindcss(),
       nodePolyfills({
         include: ['buffer', 'stream', 'util', 'zlib', 'process'],

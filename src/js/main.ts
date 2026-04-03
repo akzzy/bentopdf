@@ -1132,6 +1132,35 @@ const init = async () => {
     });
   }
 
+  // --- Theme Toggle Logic ---
+  const applyTheme = (isLight: boolean) => {
+    if (isLight) {
+      document.documentElement.classList.add('light-mode');
+    } else {
+      document.documentElement.classList.remove('light-mode');
+    }
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  };
+
+  const savedTheme = localStorage.getItem('theme');
+  const prefersLight =
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: light)').matches;
+  const initialLight = savedTheme === 'light' || (!savedTheme && prefersLight);
+  applyTheme(initialLight);
+
+  const toggleTheme = () => {
+    const isLightNow =
+      document.documentElement.classList.contains('light-mode');
+    applyTheme(!isLightNow);
+  };
+
+  const desktopBtn = document.getElementById('theme-toggle-desktop');
+  const mobileBtn = document.getElementById('theme-toggle-mobile');
+
+  if (desktopBtn) desktopBtn.addEventListener('click', toggleTheme);
+  if (mobileBtn) mobileBtn.addEventListener('click', toggleTheme);
+
   // Rewrite links after all dynamic content is fully loaded
   rewriteLinks();
 };
