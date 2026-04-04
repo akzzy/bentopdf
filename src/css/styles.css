@@ -56,6 +56,18 @@
 
   --color-white: #ffffff;
   --color-black: #000000;
+
+  --color-indigo-50: #effaf5;
+  --color-indigo-100: #dbf2ea;
+  --color-indigo-200: #bde7d9;
+  --color-indigo-300: #90d7c0;
+  --color-indigo-400: #72d3b2;
+  --color-indigo-500: #65ceab;
+  --color-indigo-600: #59c9a5;
+  --color-indigo-700: #46b793;
+  --color-indigo-800: #359d7d;
+  --color-indigo-900: #2c856a;
+  --color-indigo-950: #1b5341;
 }
 
 /* Light Mode Overrides */

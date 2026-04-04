@@ -90,23 +90,23 @@ docker run -d -p 3000:8080 localedit:custom
 
 ## Environment Variables
 
-| Variable                             | Description                                 | Default                                                         |
-| ------------------------------------ | ------------------------------------------- | --------------------------------------------------------------- |
-| `SIMPLE_MODE`                        | Build without LibreOffice tools             | `false`                                                         |
-| `BASE_URL`                           | Deploy to subdirectory                      | `/`                                                             |
-| `VITE_WASM_PYMUPDF_URL`              | PyMuPDF WASM module URL                     | `https://cdn.jsdelivr.net/npm/@LocalEdit/pymupdf-wasm@0.11.16/` |
-| `VITE_WASM_GS_URL`                   | Ghostscript WASM module URL                 | `https://cdn.jsdelivr.net/npm/@LocalEdit/gs-wasm/assets/`       |
-| `VITE_WASM_CPDF_URL`                 | CoherentPDF WASM module URL                 | `https://cdn.jsdelivr.net/npm/coherentpdf/dist/`                |
-| `VITE_TESSERACT_WORKER_URL`          | OCR worker script URL                       | _(empty; use Tesseract.js default CDN)_                         |
-| `VITE_TESSERACT_CORE_URL`            | OCR core runtime directory                  | _(empty; use Tesseract.js default CDN)_                         |
-| `VITE_TESSERACT_LANG_URL`            | OCR traineddata directory                   | _(empty; use Tesseract.js default CDN)_                         |
-| `VITE_TESSERACT_AVAILABLE_LANGUAGES` | Comma-separated OCR languages exposed in UI | _(empty; show full catalog)_                                    |
-| `VITE_OCR_FONT_BASE_URL`             | OCR text-layer font directory               | _(empty; use remote Noto font URLs)_                            |
-| `VITE_DEFAULT_LANGUAGE`              | Default UI language                         | `en`                                                            |
-| `VITE_BRAND_NAME`                    | Custom brand name                           | `Local Edit`                                                    |
-| `VITE_BRAND_LOGO`                    | Logo path relative to `public/`             | `images/favicon-no-bg.svg`                                      |
-| `VITE_FOOTER_TEXT`                   | Custom footer/copyright text                | `© 2026 Local Edit. All rights reserved.`                       |
-| `DISABLE_TOOLS`                      | Comma-separated tool IDs to hide            | _(empty; all tools enabled)_                                    |
+| Variable                             | Description                                 | Default                                                        |
+| ------------------------------------ | ------------------------------------------- | -------------------------------------------------------------- |
+| `SIMPLE_MODE`                        | Build without LibreOffice tools             | `false`                                                        |
+| `BASE_URL`                           | Deploy to subdirectory                      | `/`                                                            |
+| `VITE_WASM_PYMUPDF_URL`              | PyMuPDF WASM module URL                     | `https://cdn.jsdelivr.net/npm/@bentopdf/pymupdf-wasm@0.11.16/` |
+| `VITE_WASM_GS_URL`                   | Ghostscript WASM module URL                 | `https://cdn.jsdelivr.net/npm/@bentopdf/gs-wasm/assets/`       |
+| `VITE_WASM_CPDF_URL`                 | CoherentPDF WASM module URL                 | `https://cdn.jsdelivr.net/npm/coherentpdf/dist/`               |
+| `VITE_TESSERACT_WORKER_URL`          | OCR worker script URL                       | _(empty; use Tesseract.js default CDN)_                        |
+| `VITE_TESSERACT_CORE_URL`            | OCR core runtime directory                  | _(empty; use Tesseract.js default CDN)_                        |
+| `VITE_TESSERACT_LANG_URL`            | OCR traineddata directory                   | _(empty; use Tesseract.js default CDN)_                        |
+| `VITE_TESSERACT_AVAILABLE_LANGUAGES` | Comma-separated OCR languages exposed in UI | _(empty; show full catalog)_                                   |
+| `VITE_OCR_FONT_BASE_URL`             | OCR text-layer font directory               | _(empty; use remote Noto font URLs)_                           |
+| `VITE_DEFAULT_LANGUAGE`              | Default UI language                         | `en`                                                           |
+| `VITE_BRAND_NAME`                    | Custom brand name                           | `Local Edit`                                                   |
+| `VITE_BRAND_LOGO`                    | Logo path relative to `public/`             | `images/favicon-no-bg.svg`                                     |
+| `VITE_FOOTER_TEXT`                   | Custom footer/copyright text                | `© 2026 Local Edit. All rights reserved.`                      |
+| `DISABLE_TOOLS`                      | Comma-separated tool IDs to hide            | _(empty; all tools enabled)_                                   |
 
 WASM module URLs are pre-configured with CDN defaults — all advanced features work out of the box. Override these for air-gapped or self-hosted deployments.
 
@@ -256,8 +256,8 @@ bash scripts/prepare-airgap.sh --list-ocr-languages
 bash scripts/prepare-airgap.sh --search-ocr-language german
 
 # 2. Download WASM/OCR packages
-npm pack @LocalEdit/pymupdf-wasm@0.11.14
-npm pack @LocalEdit/gs-wasm
+npm pack @bentopdf/pymupdf-wasm@0.11.14
+npm pack @bentopdf/gs-wasm
 npm pack coherentpdf
 npm pack tesseract.js@7.0.0
 npm pack tesseract.js-core@7.0.0

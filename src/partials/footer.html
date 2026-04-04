@@ -4,13 +4,14 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
       <div class="mb-8 md:mb-0">
         <div class="flex items-center justify-center md:justify-start mb-4">
-          <img
-            id="footer-logo"
-            src="{{baseUrl}}{{#if brandLogo}}{{brandLogo}}{{else}}images/favicon.svg{{/if}}"
-            alt="{{#if brandName}}{{brandName}}{{else}}Local Edit{{/if}} Logo"
-            class="h-10 w-10 mr-3"
-          />
-          <span id="footer-brand" class="text-xl font-bold text-white">{{#if brandName}}{{brandName}}{{else}}Local Edit{{/if}}</span>
+          <div class="flex items-stretch border-2 border-indigo-600">
+            <div class="bg-indigo-600 text-[#ffffff] font-bold text-xl px-1.5 py-1 flex items-center justify-center">
+              PDF
+            </div>
+            <div class="text-white font-bold text-xl px-3 py-1 flex items-center justify-center bg-transparent min-w-[7rem]">
+              {{#if brandName}}{{brandName}}{{else}}Local Edit{{/if}}
+            </div>
+          </div>
         </div>
         <p id="footer-copyright" class="text-gray-400 text-sm" {{#unless footerText}}data-i18n="footer.copyright"{{/unless}}>
           {{#if footerText}}{{footerText}}{{else}}&copy; 2026 Local Edit. All rights reserved.{{/if}}

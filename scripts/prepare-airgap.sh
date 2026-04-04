@@ -632,16 +632,16 @@ else
   WASM_TMP=$(mktemp -d)
   trap 'rm -rf "$WASM_TMP"' EXIT
 
-  info "Downloading @LocalEdit/pymupdf-wasm@${PYMUPDF_VERSION}..."
-  if ! (cd "$WASM_TMP" && npm pack "@LocalEdit/pymupdf-wasm@${PYMUPDF_VERSION}" --quiet 2>&1); then
-    error "Failed to download @LocalEdit/pymupdf-wasm@${PYMUPDF_VERSION}"
+  info "Downloading @bentopdf/pymupdf-wasm@${PYMUPDF_VERSION}..."
+  if ! (cd "$WASM_TMP" && npm pack "@bentopdf/pymupdf-wasm@${PYMUPDF_VERSION}" --quiet 2>&1); then
+    error "Failed to download @bentopdf/pymupdf-wasm@${PYMUPDF_VERSION}"
     error "Check your internet connection and that the package exists on npm."
     exit 1
   fi
 
-  info "Downloading @LocalEdit/gs-wasm@${GS_VERSION}..."
-  if ! (cd "$WASM_TMP" && npm pack "@LocalEdit/gs-wasm@${GS_VERSION}" --quiet 2>&1); then
-    error "Failed to download @LocalEdit/gs-wasm@${GS_VERSION}"
+  info "Downloading @bentopdf/gs-wasm@${GS_VERSION}..."
+  if ! (cd "$WASM_TMP" && npm pack "@bentopdf/gs-wasm@${GS_VERSION}" --quiet 2>&1); then
+    error "Failed to download @bentopdf/gs-wasm@${GS_VERSION}"
     error "Check your internet connection and that the package exists on npm."
     exit 1
   fi

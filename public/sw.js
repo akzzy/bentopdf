@@ -286,8 +286,8 @@ function getLocalPathForCDNUrl(pathname) {
 function shouldCache(pathname, isCDN = false) {
   if (isCDN) {
     return (
-      pathname.includes('/@LocalEdit/pymupdf-wasm') ||
-      pathname.includes('/@LocalEdit/gs-wasm') ||
+      pathname.includes('/@bentopdf/pymupdf-wasm') ||
+      pathname.includes('/@bentopdf/gs-wasm') ||
       pathname.includes('/@matbee/libreoffice-converter') ||
       pathname.match(/\.(wasm|whl|zip|json|js|gz)$/)
     );
